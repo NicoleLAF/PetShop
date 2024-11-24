@@ -53,7 +53,6 @@
   </div>
   
   <script>
-      // Inicializa o carrinho com os dados do LocalStorage (ou vazio se não houver dados)
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
   
       function addToCart(name, price) {
@@ -103,12 +102,10 @@
           }
       }
   
-      // Função para salvar o carrinho no LocalStorage
       function saveCart() {
           localStorage.setItem('cart', JSON.stringify(cart));
       }
   
-      // Renderiza o carrinho ao carregar a página
       renderCart();
   </script>
 
